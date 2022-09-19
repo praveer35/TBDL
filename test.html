@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <style>
+
+    #start {
+    width: 20%;
+    margin: auto;
+    margin-right: 45px;
+    border: 3px solid black;
+    padding: 15px;
+    display: inline;
+    background-color: #ff859d;
+    border-radius: 15px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+}
+#start:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+#stop {
+    width: 20%;
+    margin: auto;
+    margin-right: 45px;
+    border: 3px solid black;
+    padding: 15px;
+    display: inline;
+    background-color: #ff859d;
+    border-radius: 15px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+}
+#stop:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+        </style>
+        <h1>HELLO!</h1>
+        <div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px;">
+            <span id="final" class="text-light"></span>
+            <span id="interim" class="text-secondary"></span>
+        </div>
+        <div id="start">
+            START
+        </div>
+        <div id="stop">
+            STOP
+        </div>
+        <script src="./speechRecognition.js"></script>
+    </body>
+</html>

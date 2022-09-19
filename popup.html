@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="stylesheet" href="button.css">-->
+    <style>
+#buttons {
+    width: 100%;
+    margin: auto;
+    margin-left: 150px;
+    padding: 10px;
+    display: block;
+
+}
+#submit {
+    width: 20%;
+    margin: auto;
+    margin-right: 45px;
+    border: 3px solid black;
+    padding: 15px;
+    display: inline;
+    background-color: #ff859d;
+    border-radius: 15px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+}
+#submit:hover {
+    cursor: pointer;
+    background-color: #693640;
+    color: white;
+    transition: 0.4s;
+}
+#record {
+    width: 20%;
+    margin: auto;
+    border: 3px solid black;
+    padding: 15px;
+    display: inline;
+    background-color: #9385ff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+}
+#record:hover {
+    cursor: pointer;
+    background-color: #36315e;
+    color: white;
+    transition: 0.4s;
+}
+.area {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+#inputtext, #output {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 7px;
+}
+body{
+  background-color: #b7ff85;
+  font-family: Helvetica, sans-serif;
+}
+#inputtext, #output {
+  font-family: Helvetica, sans-serif;
+}
+#inputtext:focus, #output:focus {
+  border-color: #bbb;
+}
+#microphone-status {
+  color: #ddd;
+}
+#output {
+  height: 400px;
+}
+    </style>
+  </head>
+  
+  <body>
+    <form>
+        <h1>Text to summarize:</h1>
+        <p id="microphone-status"></p>
+        <textarea class="area", id="inputtext" name="input text" rows="10" cols="70" placeholder="Copy and paste the text you want to summarize."></textarea>
+        <br><br>
+        <div id="buttons">
+          <div id="submit">TL;DR</div>
+          <div id="record">TB;DL</div>
+        </div>
+
+    </form>
+    <br>
+    <textarea class="area", id="output" name="input text" rows="10" cols="70" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' placeholder="Summarized text will appear here."></textarea>
+    <p id="studyguide"></p>
+    <script src="submitform.js"></script>
+    <script src="realtimeTranscription.js"></script>
+  </body>
+</html>
